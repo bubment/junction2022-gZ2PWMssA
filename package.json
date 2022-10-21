@@ -1,0 +1,18 @@
+{
+  "name": "junction2022-gZ2PWMssA",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run-frontend": "cd ./frontend && npm run dev",
+    "run-backend": "cd ./backend && node index",
+    "run-dev": "npm-run-all --parallel run-backend run-frontend" 
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}
