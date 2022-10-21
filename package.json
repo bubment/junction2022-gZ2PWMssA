@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "run-frontend": "cd ./frontend && npm run dev",
-    "run-backend": "cd ./backend && node index",
-    "run-dev": "npm-run-all --parallel run-backend run-frontend" 
+    "run-backend": "cd ./backend && npm run watch",
+    "watch-dev": "npm-run-all --parallel run-backend run-frontend"
   },
   "keywords": [],
   "author": "",
