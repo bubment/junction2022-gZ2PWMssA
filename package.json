@@ -7,7 +7,14 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "run-frontend": "cd ./frontend && npm run dev",
     "run-backend": "cd ./backend && npm run watch",
-    "watch-dev": "npm-run-all --parallel run-backend run-frontend"
+    "watch-dev": "npm-run-all --parallel run-backend run-frontend",
+    "ci-frontend": "cd ./frontend && npm ci",
+    "ci-backend": "cd ./backend && npm ci",
+    "ci-all": "npm ci && npm-run-all --parallel ci-frontend ci-backend",
+    "build-frontend": "cd ./frontend && npm install && npm run build && npm prune --production",
+    "build-backend": "cd ./backend && npm install && npm run build",
+    "build-all": "cd ./frontend && npm run build",
+    "start": "cd ./backend && npm run start"
   },
   "keywords": [],
   "author": "",

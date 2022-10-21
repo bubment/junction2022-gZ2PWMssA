@@ -9,6 +9,8 @@ const app = express()
 
 app.use(cors());
 
+app.use(express.static('../frontend/dist'))
+
 app.get('/about-info', function (req, res) {
     res.status(200).json({
         name:'Attila'
