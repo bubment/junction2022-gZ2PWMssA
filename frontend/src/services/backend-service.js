@@ -23,5 +23,8 @@ export default {
     },
     postRecommendations: async function (cartContent) {
         return axios.post(`${URL}/recommendations`, cartContent)
+    },
+    composeCategoryImgUrl: function (category) {
+        return `${URL}/${category.iconUrl}`;
     }
 }

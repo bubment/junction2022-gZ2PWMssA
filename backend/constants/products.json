@@ -2,18 +2,65 @@
   "categories": [
     {
       "name": "dairy",
-      "iconUrl": "images/assets/dairy.png",
+      "displayName": "Dairy product",
+      "iconUrl": "images/dairy.png",
       "products": [
         {"name": "milk", "unitOfMeasure": "l"},
         {"name": "cheese", "unitOfMeasure": "kg"}
       ]
     },
     {
+      "name": "drinks",
+      "displayName": "Drinks",
+      "iconUrl": "images/drinks.png",
+      "products": [
+        {"name": "cola", "unitOfMeasure": "l"},
+        {"name": "water", "unitOfMeasure": "l"}
+      ]
+    },
+    {
+      "name": "sweets",
+      "displayName": "Sweets",
+      "iconUrl": "images/sweets.png",
+      "products": [
+        {"name": "chocolate", "unitOfMeasure": "unit"},
+        {"name": "marshmallow", "unitOfMeasure": "unit"}
+      ]
+    },
+    {
+      "name": "fruitveggie",
+      "displayName": "Fruits & veggies",
+      "iconUrl": "images/fruitveggie.png",
+      "products": [
+        {"name": "apple", "unitOfMeasure": "kg"},
+        {"name": "cucumber", "unitOfMeasure": "kg"}
+      ]
+    },
+    {
+      "name": "vegan",
+      "displayName": "Vegan",
+      "iconUrl": "images/vegan.png",
+      "products": [
+        {"name": "tofu", "unitOfMeasure": "unit"},
+        {"name": "seitan", "unitOfMeasure": "kg"}
+      ]
+    },
+    {
       "name": "bakery",
-      "iconUrl": "images/assets/bakery.png",
+      "displayName": "Bakery",
+      "iconUrl": "images/bakery.png",
       "products": [
         {"name": "bread", "unitOfMeasure": "kg"},
         {"name": "bun", "unitOfMeasure": "unit"}
+      ]
+    },
+    {
+      "name": "meat",
+      "displayName": "Meat",
+      "iconUrl": "images/meat.png",
+      "products": [
+        {"name": "hamburger", "unitOfMeasure": "kg"},
+        {"name": "salame", "unitOfMeasure": "kg"}
       ]
     }
   ]

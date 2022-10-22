@@ -1,60 +1,79 @@
 <template>
   <div class="category-button">
     <div class="check-row">
-      <span v-if="isChecked">PIPA</span>
+      <div v-if="isChecked" class="category-check">
+        <BIconCheckLg></BIconCheckLg>
+      </div>
     </div>
-    <img src="{{ imgUrl }}" class="category-img">
-    <span class="category-name">{{ categoryName }}</span>
+    <img :src="imgUrl" class="category-img">
+    <span class="category-name">{{ category.displayName }}</span>
   </div>
 </template>
 
 <script>
+import backendService from '../services/backend-service';
+import { BIconCheckLg } from 'bootstrap-icons-vue';
+
 export default {
   name: 'CategoryButton',
+  components: {
+    BIconCheckLg,
+  },
   props: {
-    categoryName: String,
-    imgUrl: String,
+    category: Object,
     isChecked: Boolean
+  },
+  computed: {
+    imgUrl: function () {
+      return backendService.composeCategoryImgUrl(this.category);
+    }
   }
 }
 </script>
 
 <style scoped>
-* {
-  border: 1px solid black;
-}
-
 .category-button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 150px;
-  width: 150px;
+  height: 160px;
+  width: 160px;
   border: 1px solid #0097c7;
   border-radius: 10px;
+  margin-top: 10px;
 }
 
 .check-row {
   display: flex;
   margin-top: 5px;
   justify-content: flex-end;
+  width: 100%;
   height: 20px;
-  border: 1px solid black;
-  width: 90%;
 }
 
 .category-img {
-  height: 70px;
-  width: 70px;
-  margin-top: 10px
+  height: 80px;
+  width: 80px;
+  margin-top: 5px;
 }
 
 .category-name {
-  margin-top: 10px;
+  color: #5d7079;
   width: 90%;
   text-align: center;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+}
+
+.category-check {
+  display: flex;
+  color: #37517e;
+  align-items: center;
+  justify-content: center;
+  background-color: #e6e6e6;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
 }
 </style>
