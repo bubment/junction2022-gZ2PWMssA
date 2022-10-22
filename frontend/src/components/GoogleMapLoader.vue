@@ -77,7 +77,7 @@ export default {
       const markerWidth = displayPrice.length * oneCharacterPixelSpace + 45
       const mySVG = `
           <svg xmlns="http://www.w3.org/2000/svg" width="180" height="44" viewBox="0 0 180 44">
-            <rect id="svgRect" rx="9" ry="9" width="${markerWidth}" height="44" style="fill:#37517e;"/>
+            <rect id="svgRect" rx="9" ry="9" width="${markerWidth}" height="44" style="fill:#2e4369;"/>
             <g id="svgText">
               <text x="12" y="29" fill="white" font-size="20px">${displayPrice} HUF</text>
             </g>
