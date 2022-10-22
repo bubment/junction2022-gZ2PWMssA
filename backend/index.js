@@ -41,6 +41,11 @@ app.post('/recommendations', (req, res) => {
     res.status(200).send(result)
 })
 
+// Catch all other frontend pages
+app.get('/*', (req, res) => {
+    res.sendFile('index.html', { root: '../frontend/dist' });
+})
+
 app.listen(PORT,()=>{
     console.log(`App is running on port ${PORT}`);
 })
