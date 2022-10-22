@@ -1,0 +1,18 @@
+{
+  "categories": [
+    {
+      "name": "diary",
+      "products": [
+        {"name": "milk", "unitOfMeasure": "l"},
+        {"name": "cheese", "unitOfMeasure": "kg"}
+      ]
+    },
+    {
+      "name": "meat",
+      "products": [
+        {"name": "chicken", "unitOfMeasure": "kg"},
+        {"name": "pork", "unitOfMeasure": "kg"}
+      ]
+    }
+  ]
+}

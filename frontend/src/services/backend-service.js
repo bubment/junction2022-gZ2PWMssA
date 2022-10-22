@@ -15,4 +15,10 @@ export default {
     getGoogleMapsApiKey: async function () {
         return axios.get(`${URL}/google-maps-api-key`)
     },
+    getCategories: async function () {
+        return axios.get(`${URL}/categories`)
+    },
+    getProductsByCategory: async function (category) {
+        return axios.get(`${URL}/products/${category}`)
+    },
 }
