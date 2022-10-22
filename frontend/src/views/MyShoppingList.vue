@@ -1,7 +1,6 @@
 <template>
   <div class="myShoppingList container">
-    <h1>My Shopping list</h1>
-    <h2>A legfontosabb dolog a földön: {{name}}</h2>
+    <h1>My shopping list</h1>
     <CounterList
       :items="cartStore.items"
       :incrementFunction="cartStore.incrementItem"
@@ -11,7 +10,14 @@
   </div>
 </template>
 
-<style>
+<style scoped>
+.myShoppingList {
+  font-family:'AvertaDemoPECuttedDemo-Regular';
+}
+h1 {
+  font-weight: bold;
+  color: var(--cc-secondary);
+}
 </style>
 <script>
 import backendService from '../services/backend-service'

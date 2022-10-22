@@ -23,7 +23,12 @@ export const useCartStore = defineStore('cart', () => {
     items[item] = (items[item] ?? 0) + 1
   }
   function decrementItem(item) {
-    items[item] = (items[item] ?? 0) - 1
+    const result = (items[item] ?? 0) - 1
+    if (result > 0) {
+      items[item] = (items[item] ?? 0) - 1
+    } else {
+      items[item] === undefined ? true : delete items[item]
+    }
   }
 
   return { items, addToCart, setItemQuantity, incrementItem, decrementItem }
