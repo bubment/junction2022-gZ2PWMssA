@@ -2,8 +2,8 @@
   "shops": [
     {
       "brand": "Aldi",
-      "location": { "lat": 47.4848880, "lng": 19.076500 },
-      "logoUrl": "assets/images/aldi.png",
+      "location": { "lat": 47.499166, "lng": 19.054049 },
+      "logoUrl": "images/aldi.png",
       "products": [
         {"name": "milk", "price": "100"},
         {"name": "cheese", "price": "110"},
@@ -13,8 +13,8 @@
     },
     {
       "brand": "Auchan",
-      "location": { "lat": 47.4848885, "lng": 19.076505 },
-      "logoUrl": "assets/images/auchan.png",
+      "location": { "lat": 47.500456, "lng": 19.063780 },
+      "logoUrl": "images/auchan.png",
       "products": [
         {"name": "milk", "price": "130"},
         {"name": "cheese", "price": "120"},

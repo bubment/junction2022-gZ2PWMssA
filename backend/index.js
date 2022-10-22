@@ -3,6 +3,7 @@ const cors = require('cors');
 require('dotenv').config();
 const { getProductsByCategory, getCategories } = require('./services/productService')
 const { calculateRecommendations } = require('./services/shopService')
+const { readFile } = require('./services/fileService')
 
 const PORT = 3000
 
@@ -41,10 +42,16 @@ app.post('/recommendations', (req, res) => {
     res.status(200).send(result)
 })
 
+app.get('/my-position', function(req, res) {
+    const userStaticLocationInfo = readFile('./constants/myPosition.json');
+    res.status(200).send(userStaticLocationInfo)
+})
+
 // Catch all other frontend pages
 app.get('/*', (req, res) => {
-    res.sendFile('index.html', { root: '../frontend/dist' });
+    res.sendFile('index.html', {root: '../frontend/dist'});
 })
+
 
 app.listen(PORT,()=>{
     console.log(`App is running on port ${PORT}`);

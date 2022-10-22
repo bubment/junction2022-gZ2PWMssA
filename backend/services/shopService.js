@@ -16,6 +16,7 @@ const calculateRecommendations = (cartContent) => {
             brand: shop.brand,
             logoUrl: shop.logoUrl,
             basketSumPrice:0,
+            location: shop.location
         }
         // Calculate the basket sum price
         for(const cartItem of cartContent) {
