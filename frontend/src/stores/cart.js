@@ -1,11 +1,19 @@
-import { ref, reactive } from 'vue'
+import { ref, reactive, computed } from 'vue'
 import { defineStore } from 'pinia'
+import backendService from '../services/backend-service'
 
 export const useCartStore = defineStore('cart', () => {
+  const productsRaw = reactive({})
+  const productsRawCat = reactive({})
   const items = reactive({})
   items["pineapple"] = 2
   items["apple"] = 1
+  items["milk"] = 1
   // name => quantity pairs
+
+  const categories = reactive([])
+  // [] of {name, iconUrl}
+  const categoryNames = computed(() => categories.map(c => c.name))
 
   function addToCart(item, quantity) {
     items[item] = (items[item] ?? 0) + quantity
@@ -31,5 +39,48 @@ export const useCartStore = defineStore('cart', () => {
     }
   }
 
-  return { items, addToCart, setItemQuantity, incrementItem, decrementItem }
+  async function loadCategories() {
+    if (categories.length === 0) {
+      const newCategories = (await backendService.getCategories()).data
+      for (const c of newCategories) {
+        categories.push(c)
+      }
+    }
+  }
+
+  async function loadProductsRaw() {
+    // console.log('loadpraw')
+    let tmpProductsRaw = (await backendService.getProductsRaw()).data
+    // console.log('loadpraw', tmpProductsRaw)
+    // for (const o in Object.entries(tmpProductsRaw)) {
+    //   productsRaw[o[0]] = o[1]
+    // }
+    productsRaw["categories"] = tmpProductsRaw.categories
+    for (const cat of tmpProductsRaw.categories) {
+      productsRawCat[cat.name] = cat.products.map(x=>x.name)
+    }
+    // productsRawCat = tmpProductsRaw.categories
+    // console.log("lpr", productsRaw)
+  }
+
+  // const isProductInCategory = computed((categoryName, productName)=> {
+  //   return productsRaw.categories.filter(x => x.name === props.categoryName)[0].products.map(x => x.name).includes(item)
+  // })
+
+  function itemsByCategory() {
+    try {
+      return this.productsRaw.categories.filter(x => x.name === props.categoryName)[0].products.map(x => x.name)
+    } catch (error) {
+      console.log(error)
+    }
+    return []
+  }
+
+  loadCategories()
+  loadProductsRaw()
+  return { items, addToCart, setItemQuantity,
+    incrementItem, decrementItem, categories,
+    categoryNames, productsRaw,
+    itemsByCategory, productsRawCat
+  }
 })

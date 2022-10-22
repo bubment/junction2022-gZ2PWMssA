@@ -12,5 +12,10 @@ const getCategories = () => {
     return fileContent.categories.map(category => _.omit(category, 'products'));
 }
 
+const getRaw = () => {
+    return readFile('./constants/products.json');
+}
+
 module.exports.getProductsByCategory = getProductsByCategory;
 module.exports.getCategories = getCategories;
+module.exports.getRaw = getRaw;

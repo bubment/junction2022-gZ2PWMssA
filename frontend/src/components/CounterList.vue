@@ -1,7 +1,7 @@
 <template>
   <TransitionGroup tag="ul" name="fade" class="counterList">
     <li v-for="(count, name) in items" v-bind:key="name">
-      <span class="name">{{ name }}</span>
+      <span class="name">{{ name }} {{possibleValues}}</span>
       <span class="iconWrap">
         <img class="icon" src="../assets/i-minus.svg" @click="decrementFunction(name)" />
       </span>
@@ -81,7 +81,8 @@ export default defineComponent({
   props: [
     "items",
     "incrementFunction",
-    "decrementFunction"
+    "decrementFunction",
+    "possibleValues"
   ]
 })
 </script>

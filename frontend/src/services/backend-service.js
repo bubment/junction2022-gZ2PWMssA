@@ -18,6 +18,9 @@ export default {
     getCategories: async function () {
         return axios.get(`${URL}/categories`)
     },
+    getProductsRaw: async function() {
+        return axios.get(`${URL}/products-raw`)
+    },
     getProductsByCategory: async function (category) {
         return axios.get(`${URL}/products/${category}`)
     },

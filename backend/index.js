@@ -1,7 +1,7 @@
 const express = require('express')
 const cors = require('cors');
 require('dotenv').config();
-const { getProductsByCategory, getCategories } = require('./services/productService')
+const { getProductsByCategory, getCategories, getRaw } = require('./services/productService')
 const { calculateRecommendations } = require('./services/shopService')
 const { readFile } = require('./services/fileService')
 
@@ -34,6 +34,11 @@ app.get('/categories', function (req,res) {
 
 app.get('/products/:category', function (req,res) {
     const result = getProductsByCategory(req.params.category)
+    res.status(200).send(result)
+})
+
+app.get('/products-raw', function (req,res) {
+    const result = getRaw()
     res.status(200).send(result)
 })
 
