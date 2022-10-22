@@ -2,3 +2,14 @@ html, body {
   margin: 0;
   padding: 0;
 }
+
+html {
+  /* Our colors */
+  /* Use like: color: var(--cc-primary); */
+  --cc-primary: #37517e;
+  --cc-secondary: #5d7079;
+  --cc-tetriary: #768e9c;
+  --cc-accent: #0097c7;
+  --cc-accent-hover: #0084b3;
+  --cc-accent-active: #0077a5;
+}

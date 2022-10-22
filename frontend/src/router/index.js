@@ -4,6 +4,7 @@ import AboutView from '../views/AboutView.vue'
 import BuyingView from '../views/BuyingView.vue'
 import CartView from '../views/CartView.vue'
 import RecommendationsView from '../views/RecommendationsView.vue'
+import MyShoppingList from '../views/MyShoppingList.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -32,6 +33,11 @@ const router = createRouter({
       path: '/recommendations',
       name: 'recommendations',
       component: RecommendationsView
+    },
+    {
+      path: '/my-shopping-list',
+      name: 'my shopping list',
+      component: MyShoppingList
     },
 
   ]

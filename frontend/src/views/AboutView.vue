@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div class="about container">
     <h1>This is an about page</h1>
     <h2>A legfontosabb dolog a földön: {{name}}</h2>
     <button @click="getAbout()">Valóság</button>
@@ -15,7 +15,9 @@
     <TemplateBox message="Asd!" submessage=""></TemplateBox>
     <TemplateBox message="Kek!" submessage=""></TemplateBox>
     <CounterList
-      :items="{'pineapple': 2, 'orange': 1, 'apple': 3}"
+      :items="cartStore.items"
+      :incrementFunction="cartStore.incrementItem"
+      :decrementFunction="cartStore.decrementItem"
     />
     <hr />
   </div>
