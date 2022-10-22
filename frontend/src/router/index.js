@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView.vue'
 import BuyingView from '../views/BuyingView.vue'
 import CartView from '../views/CartView.vue'
+import CategoriesView from '../views/CategoriesView.vue'
 import RecommendationsView from '../views/RecommendationsView.vue'
 import MyShoppingList from '../views/MyShoppingList.vue'
 
@@ -18,6 +19,11 @@ const router = createRouter({
       path: '/about',
       name: 'about',
       component: AboutView
+    },
+    {
+      path: '/categories',
+      name: 'categories',
+      component: CategoriesView
     },
     {
       path: '/buying',
