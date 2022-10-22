@@ -15,7 +15,13 @@
       "iconUrl": "images/drinks.png",
       "products": [
         {"name": "cola", "unitOfMeasure": "l"},
-        {"name": "water", "unitOfMeasure": "l"}
+        {"name": "water", "unitOfMeasure": "l"},
+        {"name": "champagne", "unitOfMeasure": "l"},
+        {"name": "beer", "unitOfMeasure": "l"},
+        {"name": "wine", "unitOfMeasure": "l"},
+        {"name": "vodka", "unitOfMeasure": "l"},
+        {"name": "gin", "unitOfMeasure": "l"},
+        {"name": "tequila", "unitOfMeasure": "l"}
       ]
     },
     {
@@ -51,7 +57,11 @@
       "iconUrl": "images/bakery.png",
       "products": [
         {"name": "bread", "unitOfMeasure": "kg"},
-        {"name": "bun", "unitOfMeasure": "unit"}
+        {"name": "bun", "unitOfMeasure": "unit"},
+        {"name": "baguettes", "unitOfMeasure": "unit"},
+        {"name": "croissant", "unitOfMeasure": "unit"},
+        {"name": "bagel", "unitOfMeasure": "unit"},
+        {"name": "toast", "unitOfMeasure": "unit"}
       ]
     },
     {
@@ -60,7 +70,11 @@
       "iconUrl": "images/meat.png",
       "products": [
         {"name": "hamburger", "unitOfMeasure": "kg"},
-        {"name": "salame", "unitOfMeasure": "kg"}
+        {"name": "salame", "unitOfMeasure": "kg"},
+        {"name": "chicken", "unitOfMeasure": "kg"},
+        {"name": "pork", "unitOfMeasure": "kg"},
+        {"name": "sheep", "unitOfMeasure": "kg"},
+        {"name": "goose", "unitOfMeasure": "kg"}
       ]
     }
   ]
