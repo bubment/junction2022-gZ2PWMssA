@@ -14,6 +14,10 @@
     <hr />
     <TemplateBox message="Asd!" submessage=""></TemplateBox>
     <TemplateBox message="Kek!" submessage=""></TemplateBox>
+    <CounterList
+      :items="{'pineapple': 2, 'orange': 1, 'apple': 3}"
+    />
+    <hr />
   </div>
 </template>
 
@@ -22,6 +26,7 @@
 <script>
 import backendService from '../services/backend-service'
 import TemplateBox from '../components/TemplateBoxComponent.vue';
+import CounterList from '../components/CounterList.vue';
 import { useCartStore } from '../stores/cart'
 import { defineComponent } from 'vue'
 
@@ -36,7 +41,7 @@ export default defineComponent({
       name: 'Te'
     };
   },
-  components:{ TemplateBox },
+  components:{ TemplateBox, CounterList },
   methods: {
     getAbout: async function(){
       const about = (await backendService.getAbout()).data;
