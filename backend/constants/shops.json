@@ -6,9 +6,9 @@
       "logoUrl": "assets/images/aldi.png",
       "products": [
         {"name": "milk", "price": "100"},
-        {"name": "milk", "price": "110"},
-        {"name": "milk", "price": "120"},
-        {"name": "milk", "price": "130"}
+        {"name": "cheese", "price": "110"},
+        {"name": "bread", "price": "120"},
+        {"name": "bun", "price": "130"}
       ]
     },
     {
@@ -17,9 +17,9 @@
       "logo": "assets/images/auchan.png",
       "products": [
         {"name": "milk", "price": "130"},
-        {"name": "milk", "price": "120"},
-        {"name": "milk", "price": "110"},
-        {"name": "milk", "price": "100"}
+        {"name": "cheese", "price": "120"},
+        {"name": "bread", "price": "110"},
+        {"name": "bun", "price": "100"}
       ]
     }
   ]
