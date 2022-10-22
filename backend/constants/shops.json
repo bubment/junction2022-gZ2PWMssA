@@ -14,7 +14,7 @@
     {
       "brand": "Auchan",
       "location": { "lat": 47.4848885, "lng": 19.076505 },
-      "logo": "assets/images/auchan.png",
+      "logoUrl": "assets/images/auchan.png",
       "products": [
         {"name": "milk", "price": "130"},
         {"name": "cheese", "price": "120"},
