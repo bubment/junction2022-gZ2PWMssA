@@ -110,7 +110,7 @@ export default function mapStyle() {
             "elementType": "geometry.fill",
             "stylers": [
                 {
-                    "color": "#0097c7"
+                    "color": "#00b9ff"
                 }
             ]
         }

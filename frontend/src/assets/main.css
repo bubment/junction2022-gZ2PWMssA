@@ -12,6 +12,7 @@ html {
   --cc-accent: #0097c7;
   --cc-accent-hover: #0084b3;
   --cc-accent-active: #0077a5;
+  --cc-gray: #d3d5d8;
 
   /* Disable chrome pull to refresh, to look more native */
   overscroll-behavior: contain;
