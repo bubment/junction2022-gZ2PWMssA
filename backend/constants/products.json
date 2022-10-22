@@ -1,17 +1,19 @@
 {
   "categories": [
     {
-      "name": "diary",
+      "name": "dairy",
+      "iconUrl": "images/assets/dairy.png",
       "products": [
         {"name": "milk", "unitOfMeasure": "l"},
         {"name": "cheese", "unitOfMeasure": "kg"}
       ]
     },
     {
-      "name": "meat",
+      "name": "bakery",
+      "iconUrl": "images/assets/bakery.png",
       "products": [
-        {"name": "chicken", "unitOfMeasure": "kg"},
-        {"name": "pork", "unitOfMeasure": "kg"}
+        {"name": "bread", "unitOfMeasure": "kg"},
+        {"name": "bun", "unitOfMeasure": "unit"}
       ]
     }
   ]
