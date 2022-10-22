@@ -50,7 +50,7 @@ export default {
 
 <template>
   <GoogleMapLoader :recommendations="this.sortedRecommendations" ref="mapLoader"/>
-  <div class="recommendations-bottom-design" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"><p class="icon-container"><i class="arrow-up"></i></p></div>
+  <div class="recommendations-bottom-design" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"><p class="icon-container"><i class="arrow-up"></i><span class="open-offset-text">Offers</span></p></div>
   <div class="container">
     <div class="offcanvas offcanvas-bottom own-offcanvas-style" tabindex="1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
       <div class="offcanvas-header">
@@ -107,10 +107,14 @@ export default {
 
 .icon-container{
   margin-top: 5px;
-  text-align: center;
+  margin-left: 30px;
 }
 
 .own-offcanvas-style {
   height: 90vh !important;
+}
+
+.open-offset-text{
+  margin-left: 15px;
 }
 </style>
