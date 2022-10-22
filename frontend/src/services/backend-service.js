@@ -21,4 +21,7 @@ export default {
     getProductsByCategory: async function (category) {
         return axios.get(`${URL}/products/${category}`)
     },
+    postRecommendations: async function (cartContent) {
+        return axios.post(`${URL}/recommendations`, cartContent)
+    }
 }
