@@ -9,7 +9,7 @@ const getProductsByCategory = (categoryName) => {
 
 const getCategories = () => {
     const fileContent = readFile('./constants/products.json');
-    return fileContent.categories.map(category => category.name);
+    return fileContent.categories.map(category => _.omit(category, 'products'));
 }
 
 module.exports.getProductsByCategory = getProductsByCategory;
