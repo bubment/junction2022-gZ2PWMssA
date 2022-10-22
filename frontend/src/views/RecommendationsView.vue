@@ -89,13 +89,13 @@ export default {
   width: 100%;
   position: fixed;
   bottom: 0;
-  background-color: white;
+  background-color: var(--cc-white);
   border-radius: 20px 20px 0 0;
-  border: 2px solid #37517e;
+  border: 2px solid var(--cc-primary);
 }
 
 .arrow-up {
-  border: solid black;
+  border: solid var(--cc-primary);
   border-width: 0 3px 3px 0;
   display: inline-block;
   padding: 3px;

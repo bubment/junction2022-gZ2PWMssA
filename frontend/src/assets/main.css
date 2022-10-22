@@ -6,13 +6,14 @@ html, body {
 html {
   /* Our colors */
   /* Use like: color: var(--cc-primary); */
-  --cc-primary: #37517e;
-  --cc-secondary: #5d7079;
-  --cc-tetriary: #768e9c;
-  --cc-accent: #0097c7;
-  --cc-accent-hover: #0084b3;
-  --cc-accent-active: #0077a5;
+  --cc-primary: #2e4369;
+  --cc-secondary: #253655;
+  --cc-accent: #00b9ff;
+  --cc-accent-hover: #00a6ea;
+  --cc-accent-active: #0097db;
   --cc-gray: #d3d5d8;
+  --cc-white: #fff;
+  --cc-active-row: #f3f7f9;
 
   /* Disable chrome pull to refresh, to look more native */
   overscroll-behavior: contain;

@@ -51,7 +51,7 @@ export default {
 
 .recommendation-item {
   padding: 20px 0;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid var(--cc-gray);
 }
 
 .list-row-item{
@@ -63,7 +63,7 @@ export default {
   margin-top:5px;
 }
 .navigation-link{
-  color:white;
+  color: var(--cc-white);
   text-decoration: none;
 }
 </style>

@@ -38,7 +38,7 @@ export default {
   align-items: center;
   height: 160px;
   width: 160px;
-  border: 1px solid #0097c7;
+  border: 1px solid var(--cc-accent);
   border-radius: 10px;
   margin-top: 10px;
 }
@@ -58,7 +58,7 @@ export default {
 }
 
 .category-name {
-  color: #5d7079;
+  color: var(--cc-secondary);
   width: 90%;
   text-align: center;
   text-overflow: ellipsis;
@@ -68,10 +68,10 @@ export default {
 
 .category-check {
   display: flex;
-  color: #37517e;
+  color: var(--cc-primary);
   align-items: center;
   justify-content: center;
-  background-color: #e6e6e6;
+  background-color: var(--cc-gray);
   border-radius: 50%;
   width: 24px;
   height: 24px;

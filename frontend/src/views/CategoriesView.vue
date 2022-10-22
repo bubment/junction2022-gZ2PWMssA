@@ -37,7 +37,7 @@ export default {
 .top-text {
   margin-top: 10px;
   margin-left: 15px;
-  color: #5d7079;
+  color: var(--cc-secondary);
   font-size: 18px;
 }
 
