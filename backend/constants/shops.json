@@ -5,7 +5,7 @@
       "location": { "lat": 47.499166, "lng": 19.054049 },
       "logoUrl": "images/aldi.png",
       "products": [
-        {"name": "milk", "price": "100"},
+        {"name": "milk", "price": "1000"},
         {"name": "cheese", "price": "110"},
         {"name": "bread", "price": "120"},
         {"name": "bun", "price": "130"}

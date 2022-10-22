@@ -29,5 +29,8 @@ export default {
     },
     composeCategoryImgUrl: function (category) {
         return `${URL}/${category.iconUrl}`;
+    },
+    composeImgUrl: function (relativePath) {
+        return `${URL}/${relativePath}`;
     }
 }

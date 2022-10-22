@@ -12,7 +12,8 @@ export default {
         {name: 'milk', quantity: 2},
         {name: 'cheese', quantity: 4}
       ],
-      recommendations: null
+      recommendations: null,
+      sortedRecommendations: null,
     };
   },
   components: {
@@ -21,12 +22,34 @@ export default {
   },
   async mounted() {
     this.recommendations = (await backendService.postRecommendations(this.cartContent)).data;
+    this.sortRecommendations('basketSumPrice')
+  },
+  methods: {
+    sortLogicChanged(event){
+      const activeRadiobutton = event.target.id;
+      let sortingbase = '';
+      switch (activeRadiobutton) {
+        case 'closest':
+          sortingbase = 'distance'
+          break;
+        case 'cheapest':
+          sortingbase = 'basketSumPrice'
+          break;
+        default:
+          sortingbase = 'basketSumPrice'
+      }
+      this.sortRecommendations(sortingbase)
+
+    },
+    sortRecommendations(sortBase){
+      this.sortedRecommendations = this.recommendations.sort((a,b) => a[sortBase] - b[sortBase]);
+    }
   }
 }
 </script>
 
 <template>
-  <GoogleMapLoader :recommendations="this.recommendations" ref="mapLoader"/>
+  <GoogleMapLoader :recommendations="this.sortedRecommendations" ref="mapLoader"/>
   <div class="recommendations-bottom-design" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"><p class="icon-container"><i class="arrow-up"></i></p></div>
   <div class="container">
     <div class="offcanvas offcanvas-bottom own-offcanvas-style" tabindex="1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
@@ -39,22 +62,22 @@ export default {
           <div class="row">
             <div class="col">
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                <label class="form-check-label" for="flexRadioDefault1">
-                  Default radio
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="closest" @change="sortLogicChanged($event)">
+                <label class="form-check-label" for="closest">
+                  Closest
                 </label>
               </div>
             </div>
             <div class="col">
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                <label class="form-check-label" for="flexRadioDefault2">
-                  Default checked radio
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="cheapest" @change="sortLogicChanged($event)" checked>
+                <label class="form-check-label" for="cheapest">
+                  Cheapest
                 </label>
               </div>
             </div>
           </div>
-          <RecommendationShopListItem v-for="item in recommendations" :recommendation="item" />
+          <RecommendationShopListItem v-for="item in sortedRecommendations" :recommendation="item" />
         </div>
       </div>
     </div>

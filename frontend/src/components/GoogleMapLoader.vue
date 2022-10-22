@@ -72,18 +72,16 @@ export default {
       });
     },
     addShopMarker(position, basketSumPrice) {
-      //[TODO]: Fix SVG marker display
+      const displayPrice = `${basketSumPrice.toLocaleString()}`
+      const oneCharacterPixelSpace = 18;
+      const markerWidth = displayPrice.length * oneCharacterPixelSpace + 45
       const mySVG = `
-        <svg id="Layer_1" data-name="Layer 1"
-            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 44">
-            <defs>
-                <style>.cls-1{fill:#37517e;}.cls-2{font-size:30px;fill:#fff;font-family:AvertaDemoPECuttedDemo-Regular, Averta Demo PE Cutted Demo;}.cls-3{letter-spacing:-0.01em;}</style>
-            </defs>
-            <rect class="cls-1" width="180" height="44" rx="9"/>
-            <text class="cls-2" transform="translate(21.53 32.97)">${basketSumPrice} <tspan class="cls-3" x="108.96" y="0">F</tspan>
-                <tspan x="126.12" y="0">t</tspan>
-            </text>
-        </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="180" height="44" viewBox="0 0 180 44">
+            <rect id="svgRect" rx="9" ry="9" width="${markerWidth}" height="44" style="fill:#37517e;"/>
+            <g id="svgText">
+              <text x="12" y="29" fill="white" font-size="20px">${displayPrice} HUF</text>
+            </g>
+          </svg>
       `
 
       new this.google.maps.Marker({
