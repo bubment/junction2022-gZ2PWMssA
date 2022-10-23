@@ -19,7 +19,7 @@ export default {
 </script>
 
 <template>
-  <button class="btn btn-primary savings-button align-self-end"><RouterLink :to="route">{{buttonText}}</RouterLink></button>
+  <RouterLink  class="btn btn-primary savings-button align-self-end" tag="button" :to="route">{{buttonText}}</RouterLink>
 </template>
 
 <style scoped>
