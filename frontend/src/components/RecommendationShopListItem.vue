@@ -11,7 +11,7 @@
         {{ formattedDistance }}
       </div>
       <div class="col list-row-button">
-        <button class="btn btn-primary" type="submit"><a class="navigation-link" :href="navigationUrl">Navigate</a></button>
+        <button class="btn btn-primary shop-item-button" type="submit"><a class="navigation-link" :href="navigationUrl">Navigate</a></button>
       </div>
     </div>
   </div>
@@ -65,5 +65,9 @@ export default {
 .navigation-link{
   color: var(--cc-white);
   text-decoration: none;
+}
+
+.shop-item-button{
+  background-color: var(--cc-primary);
 }
 </style>

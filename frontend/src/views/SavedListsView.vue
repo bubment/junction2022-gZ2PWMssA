@@ -1,7 +1,11 @@
 <script>
 import { RouterLink } from 'vue-router'
+import RouterButton from '../components/RouterButton.vue'
 export default {
   name: 'GoogleMapLoader',
+  components: {
+    RouterButton
+  },
   data() {
     return {
       savedLists:[
@@ -24,7 +28,8 @@ export default {
       <div class="col col-2"><img src="@/assets/i-arrow.svg"></div>
     </div>
   </div>
-  <button class="btn btn-primary savings-button align-self-end"><RouterLink to="/categories">Create new list</RouterLink></button>
+  <RouterButton buttonText="Create new list" route="/categories"></RouterButton>
+<!--  <button class="btn btn-primary savings-button align-self-end"><RouterLink to="/categories">Create new list</RouterLink></button>-->
 </template>
 
 <style scoped>
@@ -50,18 +55,5 @@ export default {
   margin-top: 10px;
   font-family: "Averta";
   color: var(--cc-primary);
-}
-
-.savings-button{
-  position: fixed;
-  bottom: 40px;
-  width: 90vw;
-  margin: 0 20px;
-
-}
-
-a {
-  color: white !important;
-  text-decoration: none;
 }
 </style>
