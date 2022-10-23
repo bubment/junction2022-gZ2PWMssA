@@ -1,16 +1,18 @@
 <template>
   <ProductList :items="products" :incrementFunction="cartStore.incrementItem"
     :decrementFunction="cartStore.decrementItem"></ProductList>
+  <RouterButton buttonText="Back to categories" route="/categories"></RouterButton>
 </template>
   
 <script>
 import ProductList from '../components/ProductList.vue';
 import { useCartStore } from '../stores/cart'
 import backendService from '../services/backend-service';
+import RouterButton from '../components/RouterButton.vue'
 
 export default {
   name: "ProductsView",
-  components: { ProductList },
+  components: { ProductList, RouterButton },
   setup() {
     const cartStore = useCartStore()
     return { cartStore }

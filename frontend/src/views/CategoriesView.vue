@@ -6,16 +6,19 @@
       </CategoryButton>
     </div>
   </div>
+  <RouterButton buttonText="Go to summary" route="/my-shopping-list"></RouterButton>
 </template>
 
 <script>
 import backendService from '../services/backend-service'
 import CategoryButton from '../components/CategoryButton.vue';
+import RouterButton from '../components/RouterButton.vue'
 
 export default {
   name: 'CategoriesView',
   components: {
-    CategoryButton
+    CategoryButton,
+    RouterButton
   },
   data() {
     return {
