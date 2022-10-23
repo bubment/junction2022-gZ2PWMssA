@@ -2,8 +2,8 @@
   <div class="container">
   <div class="top-text">Choose product by category...</div>
     <div class="categories-container row row-col-2">
-      <CategoryButton v-for="category in categories" :key="category.name" :isChecked="true" :category="category">
-      </CategoryButton>
+        <CategoryButton v-for="category in categories"  :key="category.name" :isChecked="true" :category="category" @click="goToCategoryRoute(category.name)">
+        </CategoryButton>
     </div>
   </div>
   <RouterButton buttonText="Go to summary" route="/my-shopping-list"></RouterButton>
@@ -32,6 +32,9 @@ export default {
     async getCategories() {
       this.categories = (await backendService.getCategories()).data;
     },
+    goToCategoryRoute(categoryName) {
+      this.$router.push(`/categories/${categoryName}/products`)
+    }
   }
 }
 </script>
