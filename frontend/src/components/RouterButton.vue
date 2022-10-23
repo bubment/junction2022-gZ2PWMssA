@@ -28,6 +28,7 @@ export default {
     bottom: 40px;
     width: 90vw;
     margin: 0 20px;
+    background-color: var(--cc-accent);
   }
 
   a {
