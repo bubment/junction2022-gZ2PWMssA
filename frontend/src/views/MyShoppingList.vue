@@ -16,6 +16,7 @@
     </div>
     <hr />
   </div>
+  <RouterButton buttonText="Go to offers" route="/recommendations"></RouterButton>
 </template>
 
 <style scoped>
@@ -45,6 +46,7 @@ h1 {
 import backendService from '../services/backend-service'
 import CounterList from '../components/CounterList.vue';
 import CategorizedList from '../components/CategorizedList.vue';
+import RouterButton from '../components/RouterButton.vue'
 import { useCartStore } from '../stores/cart'
 import { defineComponent } from 'vue'
 
@@ -59,7 +61,7 @@ export default defineComponent({
       name: 'Te'
     };
   },
-  components:{ CounterList, CategorizedList },
+  components:{ CounterList, CategorizedList, RouterButton },
   methods: {
     getAbout: async function(){
       const about = (await backendService.getAbout()).data;

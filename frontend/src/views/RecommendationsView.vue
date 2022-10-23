@@ -14,11 +14,6 @@ export default {
         {name: 'vodka', quantity: 5},
         {name: 'hamburger', quantity: 2},
         {name: 'water', quantity: 8},
-        // 3 Champagne
-        // 10 Beer
-        // 5 Vodka
-        // 2 Hamburger
-        // 8 Water
       ],
       recommendations: null,
       sortedRecommendations: null,
