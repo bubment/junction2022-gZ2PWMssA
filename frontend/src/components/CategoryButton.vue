@@ -38,14 +38,14 @@ export default {
   align-items: center;
   height: 160px;
   width: 160px;
-  border: 1px solid var(--cc-accent);
+  border: 1px solid var(--cc-gray);
   border-radius: 10px;
   margin-top: 10px;
 }
 
 .check-row {
   display: flex;
-  margin-top: 5px;
+  margin-top: 10px;
   justify-content: flex-end;
   width: 100%;
   height: 20px;

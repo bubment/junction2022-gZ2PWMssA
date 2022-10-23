@@ -23,7 +23,7 @@
   flex-direction: column;
   padding: 0;
   margin: 0;
-  font-family:'AvertaDemoPECuttedDemo-Regular';
+  font-family: "Averta", Helvetica, Arial;
 }
 .counterList li {
   display: flex;

@@ -1,7 +1,7 @@
 <template>
   <div class="myShoppingList container">
     <div class="pageHeader">
-      <span><h1>My shopping list</h1>
+      <span class="top-text">My shopping list
       <!-- <p v-for="c in cartStore.categoryNames">{{c}}</p> -->
       </span>
       <span><img class="icon" src="../assets/i-shoppingbag.svg" @click="incrementFunction(name)" /></span>
@@ -12,25 +12,28 @@
     <div>
       <CategorizedList category="drinks"/>
     </div>
-    <hr />
   </div>
   <RouterButton buttonText="Go to offers" route="/recommendations"></RouterButton>
 </template>
 
 <style scoped>
 .myShoppingList {
-  font-family:'AvertaDemoPECuttedDemo-Regular';
+	font-family: "Averta", Helvetica, Arial;
 }
-h1 {
-  font-weight: normal;
+
+.top-text {
+  margin-top: 20px;
+  padding-bottom: 10px;
+  margin-left: 15px;
   color: var(--cc-secondary);
-  margin-bottom: 0;
+  font-size: 18px;
 }
+
 .pageHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 .pageHeader > * {
   display: block;
@@ -38,6 +41,7 @@ h1 {
 .icon {
   height: calc(1.5rem + 1.5vw);
   width: auto;
+  margin-top: 12px;
 }
 </style>
 <script>

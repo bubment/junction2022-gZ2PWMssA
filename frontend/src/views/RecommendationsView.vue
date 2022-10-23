@@ -121,6 +121,7 @@ export default {
 
 .own-offcanvas-style {
   height: 90vh !important;
+  font-family: "Averta", Helvetica, Arial;
 }
 
 .open-offset-text{

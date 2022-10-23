@@ -14,8 +14,6 @@ html {
   --cc-gray: #d3d5d8;
   --cc-white: #fff;
   --cc-active-row: #f3f7f9;
-  --cc-border: #0000001a;
-  --bg-accent: #ecfaff;
 
   /* Disable chrome pull to refresh, to look more native */
   overscroll-behavior: contain;

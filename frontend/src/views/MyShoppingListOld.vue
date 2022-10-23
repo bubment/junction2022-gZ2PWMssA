@@ -21,7 +21,7 @@
 
 <style scoped>
 .myShoppingList {
-  font-family:'AvertaDemoPECuttedDemo-Regular';
+	font-family: "Averta", Helvetica, Arial;
 }
 h1 {
   font-weight: normal;

@@ -29,6 +29,7 @@ export default {
     width: 90vw;
     margin: 0 20px;
     background-color: var(--cc-accent);
+	border: none;
   }
 
   a {

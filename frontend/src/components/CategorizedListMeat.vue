@@ -27,7 +27,7 @@
   color: var(--cc-secondary) !important;
 }
 .accordion-item {
-  border: 2px solid var(--cc-secondary) !important;
+  border: 2px solid var(--cc-gray) !important;
   border-radius: 20px !important;
 }
 .accordion-header {
@@ -40,7 +40,7 @@
   bottom: -2px;
   left: -2px;
   right: -2px;
-  border: 2px solid var(--cc-secondary);
+  border: 2px solid var(--cc-gray);
   border-radius: 20px;
 }
 .accordion-button {

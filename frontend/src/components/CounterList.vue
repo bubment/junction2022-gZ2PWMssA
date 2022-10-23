@@ -23,13 +23,13 @@
   flex-direction: column;
   padding: 0;
   margin: 0;
-  font-family:'AvertaDemoPECuttedDemo-Regular';
+  font-family: "Averta", Helvetica, Arial;
 }
 .counterList li {
   display: flex;
   list-style: none;
   padding: 2px 0;
-  margin: 0;
+  margin: 0 0 15px 0;
 }
 .counterList li > * {
   flex: 1 0;

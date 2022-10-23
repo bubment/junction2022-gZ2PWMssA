@@ -63,7 +63,7 @@ li {
 }
 
 li.selected {
-  background-color: var(--bg-accent);
+  background-color: var(--cc-active-row);
 }
 
 li>* {
@@ -91,5 +91,6 @@ li>* {
 .name {
   text-transform: capitalize;
   color: var(--cc-secondary);
+  font-size: 14px;
 }
 </style>

@@ -1,20 +1,20 @@
 <template>
-  <div class="container recommendation-item">
-    <div class="row">
-      <div class="col">
-        <img class="brand-logo" :src="imageUrl">
-      </div>
-      <div class="col list-row-item">
-        {{ formattedPrice }}
-      </div>
-      <div class="col list-row-item">
-        {{ formattedDistance }}
-      </div>
-      <div class="col list-row-button">
-        <button class="btn btn-primary shop-item-button" type="submit"><a class="navigation-link" :href="navigationUrl">Navigate</a></button>
-      </div>
-    </div>
-  </div>
+	<div class="container recommendation-item">
+		<div class="row">
+			<div class="col">
+				<img class="brand-logo" :src="imageUrl">
+			</div>
+			<div class="col list-row-item">
+				{{ formattedPrice }}
+			</div>
+			<div class="col list-row-item">
+				{{ formattedDistance }}
+			</div>
+			<div class="col list-row-button">
+				<button class="btn btn-primary shop-item-button" type="submit"><a class="navigation-link" :href="navigationUrl">Navigate</a></button>
+			</div>
+		</div>
+	</div>
 </template>
 
 <script>
@@ -52,6 +52,7 @@ export default {
 .recommendation-item {
   padding: 20px 0;
   border-bottom: 1px solid var(--cc-gray);
+  font-family: "Averta", Helvetica, Arial;
 }
 
 .list-row-item{
@@ -69,5 +70,6 @@ export default {
 
 .shop-item-button{
   background-color: var(--cc-primary);
+  border: none;
 }
 </style>

@@ -23,8 +23,8 @@ export default {
   <div><img class="saving-img" src="@/assets/savings.svg"></div>
   <div class="title">Saved shopping lists:</div>
   <div class="container saved-list-container">
-    <div v-for="item in savedLists" class="row saving-list-row">
-      <div class="col col-10">{{ item.name }}</div>
+    <div v-for="item in savedLists" class="row saving-list-row  align-items-center">
+      <div class="col col-10 "><span class="list-name">{{ item.name }}</span></div>
       <div class="col col-2"><img src="@/assets/i-arrow.svg"></div>
     </div>
   </div>
@@ -36,13 +36,17 @@ export default {
 .title {
   font-family: "Averta";
   color: var(--cc-primary);
-  font-size: 22px;
+  font-size: 18px;
   margin: 18px;
 }
 .saving-img{
   margin: 0 18px;
   height: 160px;
   width: 90vw;
+}
+
+.list-name{
+	margin-top: 10px;
 }
 
 .saved-list-container{

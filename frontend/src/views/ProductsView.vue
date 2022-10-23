@@ -1,8 +1,17 @@
 <template>
+	<div><img class="search-field" src="@/assets/search-field.svg"></div>
   <ProductList :items="products" :incrementFunction="cartStore.incrementItem"
     :decrementFunction="cartStore.decrementItem"></ProductList>
   <RouterButton buttonText="Back to categories" route="/categories"></RouterButton>
 </template>
+
+<style>
+
+
+.search-field{
+	margin: 18px 18px 0 18px;
+}
+</style>
   
 <script>
 import ProductList from '../components/ProductList.vue';
