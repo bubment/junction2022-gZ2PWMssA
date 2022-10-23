@@ -9,8 +9,16 @@ export default {
     return {
       //[TODO] This info should come from the state handler
       cartContent: [
-        {name: 'milk', quantity: 2},
-        {name: 'cheese', quantity: 4}
+        {name: 'champagne', quantity: 3},
+        {name: 'beer', quantity: 10},
+        {name: 'vodka', quantity: 5},
+        {name: 'hamburger', quantity: 2},
+        {name: 'water', quantity: 8},
+        // 3 Champagne
+        // 10 Beer
+        // 5 Vodka
+        // 2 Hamburger
+        // 8 Water
       ],
       recommendations: null,
       sortedRecommendations: null,
