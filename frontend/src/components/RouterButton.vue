@@ -25,7 +25,7 @@ export default {
 <style scoped>
   .savings-button{
     position: fixed;
-    bottom: 15px;
+    bottom: 25px;
     width: 90vw;
     margin: 0 20px;
     background-color: var(--cc-accent);

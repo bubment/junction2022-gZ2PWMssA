@@ -25,15 +25,6 @@
       ]
     },
     {
-      "name": "sweets",
-      "displayName": "Sweets",
-      "iconUrl": "images/sweets.png",
-      "products": [
-        {"name": "chocolate", "unitOfMeasure": "unit"},
-        {"name": "marshmallow", "unitOfMeasure": "unit"}
-      ]
-    },
-    {
       "name": "fruitveggie",
       "displayName": "Fruits & veggies",
       "iconUrl": "images/fruitveggie.png",
