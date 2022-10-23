@@ -1,6 +1,7 @@
 <script>
 import GoogleMapLoader from '../components/GoogleMapLoader.vue'
 import RecommendationShopListItem from "../components/RecommendationShopListItem.vue";
+import Loader from "../components/Loader.vue";
 import backendService from '../services/backend-service'
 
 export default {
@@ -17,13 +18,17 @@ export default {
       ],
       recommendations: null,
       sortedRecommendations: null,
+      isLoaderOn: true
     };
   },
   components: {
     GoogleMapLoader,
-    RecommendationShopListItem
+    RecommendationShopListItem,
+    Loader
   },
   async mounted() {
+    const randomLoaderLength = Math.floor(Math.random() * 1500) + 700;
+    setTimeout(() => {this.isLoaderOn = false}, randomLoaderLength)
     this.recommendations = (await backendService.postRecommendations(this.cartContent)).data;
     this.sortRecommendations('basketSumPrice')
   },
@@ -52,6 +57,7 @@ export default {
 </script>
 
 <template>
+  <Loader v-if="isLoaderOn"></Loader>
   <GoogleMapLoader :recommendations="this.sortedRecommendations" ref="mapLoader"/>
   <div class="recommendations-bottom-design" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"><p class="icon-container"><i class="arrow-up"></i><span class="open-offset-text">Offers</span></p></div>
   <div class="container">
