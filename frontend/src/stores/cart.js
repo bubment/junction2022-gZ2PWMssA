@@ -6,9 +6,11 @@ export const useCartStore = defineStore('cart', () => {
   const productsRaw = reactive({})
   const productsRawCat = reactive({})
   const items = reactive({})
-  items["pineapple"] = 2
-  items["apple"] = 1
-  items["milk"] = 1
+  items["champagne"] = 3
+  items["beer"] = 10
+  items["vodka"] = 5
+  // items["hamburger"] = 2
+  items["water"] = 8
   // name => quantity pairs
 
   const categories = reactive([])

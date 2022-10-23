@@ -1,11 +1,11 @@
 <template>
   <TransitionGroup tag="ul" name="fade" class="counterList">
-    <li v-for="(count, name) in items" v-bind:key="name">
-      <span class="name">{{ name }}</span>
+    <li>
+      <span class="name"> Hamburger </span>
       <span class="iconWrap">
         <img class="icon" src="../assets/i-minus.svg" @click="decrementFunction(name)" />
       </span>
-      <span class="iconWrap">{{ count }}</span>
+      <span class="iconWrap">{{ 2 }}</span>
       <span class="iconWrap">
         <img class="icon" src="../assets/i-plus.svg" @click="incrementFunction(name)" />
       </span>

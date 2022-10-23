@@ -6,11 +6,13 @@
       </span>
       <span><img class="icon" src="../assets/i-shoppingbag.svg" @click="incrementFunction(name)" /></span>
     </div>
-    <div>
-      <CategorizedListMeat category="meat"/>
-    </div>
-    <div>
-      <CategorizedList category="drinks"/>
+    <div v-for="c in cartStore.categoryNames" v-bind:key="c">
+      <CategorizedList :category="c"/>
+      <!-- <CounterList
+        :items="cartStore.items"
+        :incrementFunction="cartStore.incrementItem"
+        :decrementFunction="cartStore.decrementItem"
+      /> -->
     </div>
     <hr />
   </div>
@@ -44,7 +46,6 @@ h1 {
 import backendService from '../services/backend-service'
 import CounterList from '../components/CounterList.vue';
 import CategorizedList from '../components/CategorizedList.vue';
-import CategorizedListMeat from '../components/CategorizedListMeat.vue';
 import RouterButton from '../components/RouterButton.vue'
 import { useCartStore } from '../stores/cart'
 import { defineComponent } from 'vue'
@@ -60,7 +61,7 @@ export default defineComponent({
       name: 'Te'
     };
   },
-  components:{ CounterList, CategorizedList, RouterButton, CategorizedListMeat },
+  components:{ CounterList, CategorizedList, RouterButton },
   methods: {
     getAbout: async function(){
       const about = (await backendService.getAbout()).data;
